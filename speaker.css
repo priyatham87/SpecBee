@@ -1,0 +1,252 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ddd;
+}
+
+.speakers-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.speakers-slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Hide the scrollbar */
+.speakers-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.speakers-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.speaker-card {
+  flex: 0 0 auto;
+  width: 200px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.2s ease-in-out;
+}
+
+.speaker-card:hover {
+  transform: translateY(-5px);
+}
+
+.speaker-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 8px 0 4px;
+  color: #333;
+}
+
+.speaker-card p {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+.carousel-control {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.speaker-card img {
+  width: 75%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Container for the selected speaker details */
+.selected-speaker {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.selected-speaker[hidden] {
+  display: none;
+}
+
+.selected-speaker-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.selected-speaker-details h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #333;
+}
+
+.selected-speaker-details h4 {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+.selected-speaker-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.selected-speaker-description {
+  width: 70%;
+  margin-left: 30px;
+}
+
+.selected-speaker-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.selected-speaker-icons i {
+  color: #666;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.selected-speaker-icons i:hover {
+  color: gray;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: rgb(130, 125, 125);
+  margin-left: 30px;
+  height: auto;
+  align-self: stretch;
+}
+
+.close-icon {
+  position: absolute;
+  top: 130px;
+  right: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  transition: color 0.3s;
+}
+
+.close-icon:hover {
+  color: gray;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .speakers-slider {
+    gap: 12px;
+  }
+
+  .speaker-card {
+    width: 180px;
+    padding: 12px;
+  }
+
+  .speaker-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .speaker-card p {
+    font-size: 0.8rem;
+  }
+
+  .selected-speaker {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .selected-speaker-image img {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .selected-speaker-description {
+    width: 100%;
+    margin: 0;
+  }
+
+  .selected-speaker-icons {
+    margin: 12px 0;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .close-icon {
+    top: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .speaker-card {
+    width: 160px;
+  }
+
+  .selected-speaker {
+    padding: 10px;
+  }
+
+  .selected-speaker-details h3 {
+    font-size: 1rem;
+  }
+
+  .selected-speaker-details h4 {
+    font-size: 0.9rem;
+  }
+
+  .carousel-control {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+}

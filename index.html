@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured Speakers</title>
+    <link rel="stylesheet" href="speaker.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="speakers-section">
+      <h2>View our Featured Speakers for the Event</h2>
+      <p>
+        Speakers are core contributors and industry thought leaders working at
+        <a href="#">companies</a> that push for innovation.
+      </p>
+
+      <div class="selected-speaker" id="selectedSpeaker" hidden>
+        <div class="close-icon" onclick="closeCard()">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="selected-speaker-image">
+          <img id="selectedSpeakerImage" src="" alt="" />
+        </div>
+        <div class="selected-speaker-details">
+          <h3 id="selectedSpeakerName"></h3>
+          <h4 id="selectedSpeakerTitle"></h4>
+          <p id="selectedSpeakerCompany"></p>
+          <div class="selected-speaker-icons">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-drupal"></i>
+          </div>
+        </div>
+
+        <div class="vertical-line"></div>
+        <div class="selected-speaker-description">
+          <p id="selectedSpeakerDescription"></p>
+        </div>
+      </div>
+
+      <div class="carousel-container">
+        <button class="carousel-control left" aria-label="Previous Speaker">
+          ❮
+        </button>
+
+        <div class="speakers-slider">
+          <div
+            class="speaker-card"
+            tabindex="0"
+            aria-label="John Doe, Chief Marketing Officer at Acme Corp"
+            data-name="John Doe"
+            data-title="Chief Marketing Officer"
+            data-company="Acme Corp"
+            data-description="Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas."
+          >
+            <img src="./images/Ellipse1.png" alt="John Doe" />
+            <h3>John Doe</h3>
+            <p>Chief Marketing Officer</p>
+            <p>Acme Corp</p>
+          </div>
+          <div
+            class="speaker-card"
+            tabindex="0"
+            aria-label="John Doe, Chief Marketing Officer at Acme Corp"
+            data-name="John Doe"
+            data-title="Chief Engagement Officer"
+            data-company="Acquia"
+            data-description="Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas."
+          >
+            <img src="./images/Ellipse 2.png" alt="John Doe" />
+            <h3>John Doe</h3>
+            <p>Chief Engagement Officer</p>
+            <p>Acquia</p>
+          </div>
+          <div
+            class="speaker-card"
+            tabindex="0"
+            aria-label="John Doe, Chief Marketing Officer at Acme Corp"
+            data-name="John Doe"
+            data-title="Chief Technical Developer"
+            data-company="Pantheon"
+            data-description="Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas."
+          >
+            <img src="./images/Ellipse 3.png" alt="John Doe" />
+            <h3>John Doe</h3>
+            <p>Chief Technical Developer</p>
+            <p>Pantheon</p>
+          </div>
+          <div
+            class="speaker-card"
+            tabindex="0"
+            aria-label="John Doe, Chief Marketing Officer at Acme Corp"
+            data-name="John Doe"
+            data-title="Chief Marketing Officer"
+            data-company="Specbee"
+            data-description="Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas."
+          >
+            <img src="./images/Ellipse 4.png" alt="John Doe" />
+            <h3>John Doe</h3>
+            <p>Chief Marketing Officer</p>
+            <p>Specbee</p>
+          </div>
+          <div
+            class="speaker-card"
+            tabindex="0"
+            aria-label="John Doe, Chief Marketing Officer at Acme Corp"
+            data-name="John Doe"
+            data-title="Chief Marketing Officer"
+            data-company="Acme Corp"
+            data-description="Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas."
+          >
+            <img src="./images/Ellipse1.png" alt="John Doe" />
+            <h3>John Doe</h3>
+            <p>Chief Marketing Officer</p>
+            <p>Acme Corp</p>
+          </div>
+          <div
+            class="speaker-card"
+            tabindex="0"
+            aria-label="John Doe, Chief Marketing Officer at Acme Corp"
+            data-name="John Doe"
+            data-title="Chief Engagement Officer"
+            data-company="Acquia"
+            data-description="Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas."
+          >
+            <img src="./images/Ellipse 2.png" alt="John Doe" />
+            <h3>John Doe</h3>
+            <p>Chief Engagement Officer</p>
+            <p>Acquia</p>
+          </div>
+          <div
+            class="speaker-card"
+            tabindex="0"
+            aria-label="John Doe, Chief Marketing Officer at Acme Corp"
+            data-name="John Doe"
+            data-title="Chief Technical Developer"
+            data-company="Pantheon"
+            data-description="Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas."
+          >
+            <img src="./images/Ellipse 3.png" alt="John Doe" />
+            <h3>John Doe</h3>
+            <p>Chief Technical Developer</p>
+            <p>Pantheon</p>
+          </div>
+          <div
+            class="speaker-card"
+            tabindex="0"
+            aria-label="John Doe, Chief Marketing Officer at Acme Corp"
+            data-name="John Doe"
+            data-title="Chief Marketing Officer"
+            data-company="Specbee"
+            data-description="Monotonectally synergize business communities rather than client-centric convergence. Assertively unleash cross-platform best practices rather than pandemic total linkage. Synergistically monetize parallel infomediaries whereas 2.0 mindshare. Dramatically pursue real-time markets through e-business strategic theme areas."
+          >
+            <img src="./images/Ellipse 4.png" alt="John Doe" />
+            <h3>John Doe</h3>
+            <p>Chief Marketing Officer</p>
+            <p>Specbee</p>
+          </div>
+        </div>
+
+        <button class="carousel-control right" aria-label="Next Speaker">
+          ❯
+        </button>
+      </div>
+    </section>
+
+    <script src="speaker.js"></script>
+  </body>
+</html>
