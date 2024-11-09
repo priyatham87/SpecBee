@@ -1,0 +1,2 @@
+# SpecBee
+Speaker Details Task
